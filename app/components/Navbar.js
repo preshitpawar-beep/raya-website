@@ -6,7 +6,7 @@ export default function Navbar() {
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="sticky top-0 z-50 bg-slate-900 border-b border-slate-800"
+      className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/10"
     >
       <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
 
@@ -20,7 +20,7 @@ export default function Navbar() {
         </a>
 
         {/* NAV LINKS */}
-        <nav className="space-x-8 text-sm font-medium text-white">
+        <nav className="space-x-8 text-sm font-medium text-black">
           <a href="/products" className="hover:text-indigo-700 transition">
             Products
           </a>
