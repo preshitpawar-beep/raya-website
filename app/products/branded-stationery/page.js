@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Navbar from "../../components/Navbar";
 
 const categories = [
   {
@@ -27,19 +28,22 @@ const categories = [
 export default function BrandedStationeryPage() {
   return (
     <>
+      {/* HEADER */}
+      <Navbar />
+
       {/* HERO */}
-      <section className="bg-white">
+      <section className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-8 py-24">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold mb-6"
+            className="text-5xl font-bold mb-6 text-neutral-900"
           >
             Branded Stationery
           </motion.h1>
 
-          <p className="max-w-2xl text-lg text-slate-600">
+          <p className="max-w-2xl text-lg text-neutral-600">
             Premium everyday stationery designed to carry your brand with
             elegance, consistency, and purpose.
           </p>
@@ -60,13 +64,14 @@ export default function BrandedStationeryPage() {
                 viewport={{ once: true }}
                 className="block bg-white rounded-2xl p-8 shadow-sm border hover:shadow-md transition"
               >
-                <h3 className="text-xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3 text-neutral-900">
                   {item.title}
                 </h3>
+
                 <p className="text-slate-600 mb-6">
-                  Thoughtfully designed{" "}
-                  {item.title.toLowerCase()} that can be branded to reflect your
-                  identity.
+                  Explore our range of{" "}
+                  {item.title.toLowerCase()} designed for professional branding
+                  and everyday use.
                 </p>
 
                 <span className="inline-block text-sm font-medium underline underline-offset-4">
