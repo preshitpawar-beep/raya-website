@@ -19,7 +19,7 @@ export default function Navbar() {
           <a href="/products">Products</a>
           <a href="/about">About</a>
           <a href="/quote">Get Quote</a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Sustainability</a>
         </nav>
       </div>
     </motion.header>
