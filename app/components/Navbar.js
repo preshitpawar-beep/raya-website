@@ -15,7 +15,7 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="Raya Gifts & Stationery"
-            className="h-16 md:h-18 w-auto object-contain"
+            className="h-34 md:h-36 w-auto object-contain"
           />
         </a>
 
