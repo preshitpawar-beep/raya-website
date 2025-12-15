@@ -33,9 +33,7 @@ export default function Sustainability() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-6">
-            Our Approach
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">Our Approach</h2>
           <p className="opacity-80 mb-4">
             Sustainability is an ongoing process. We aim to work with materials,
             partners, and processes that are mindful of environmental impact.
@@ -100,4 +98,12 @@ export default function Sustainability() {
           </p>
           <a
             href="/quote"
-            classNam
+            className="inline-block bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold"
+          >
+            Request a Quote
+          </a>
+        </div>
+      </section>
+    </>
+  );
+}
