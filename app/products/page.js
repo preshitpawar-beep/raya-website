@@ -7,18 +7,22 @@ const products = [
   {
     title: "Branded Stationery",
     desc: "Thoughtfully designed stationery that reflects your brand identity.",
+    href: "/products/branded-stationery",
   },
   {
     title: "Welcome Kits",
     desc: "Curated onboarding kits for employees, partners, or clients.",
+    href: "/products/welcome-kits",
   },
   {
     title: "Corporate Gift Sets",
     desc: "Premium gifting solutions for events, milestones, and campaigns.",
+    href: "/products/corporate-gift-sets",
   },
   {
     title: "Custom Packaging",
     desc: "Packaging designed to elevate the gifting experience.",
+    href: "/products/custom-packaging",
   },
 ];
 
@@ -29,54 +33,56 @@ export default function Products() {
 
       {/* HERO */}
       <section className="bg-white border-b">
-       <div className="max-w-7xl mx-auto px-8 py-28">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl font-extrabold mb-6 text-neutral-900"
-        >
-          Our Solutions
+        <div className="max-w-7xl mx-auto px-8 py-28">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl font-extrabold mb-6 text-neutral-900"
+          >
+            Our Solutions
           </motion.h1>
 
           <p className="max-w-xl text-lg text-neutral-600">
-          A flexible range of corporate gifting and branding solutions designed
-          to meet different business needs.
-        </p>
-     </div>
-</section>
-
+            A flexible range of corporate gifting and branding solutions designed
+            to meet different business needs.
+          </p>
+        </div>
+      </section>
 
       {/* GRID */}
       <section className="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-12">
         {products.map((item, i) => (
-          <motion.div
-            key={i}
+          <motion.a
+            key={item.title}
+            href={item.href}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="bg-white rounded-2xl shadow-lg p-10"
+            className="block bg-white rounded-2xl shadow-lg p-10 hover:shadow-xl transition"
           >
             <div className="h-40 bg-neutral-100 rounded-xl mb-6" />
-            <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
-            <p className="opacity-75">{item.desc}</p>
-          </motion.div>
+            <h3 className="text-2xl font-semibold mb-3 text-neutral-900">
+              {item.title}
+            </h3>
+            <p className="text-neutral-600">{item.desc}</p>
+          </motion.a>
         ))}
       </section>
 
       {/* CTA */}
-      <section className="bg-indigo-700 text-white py-24">
+      <section className="bg-white border-t py-24">
         <div className="max-w-4xl mx-auto text-center px-8">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-neutral-900">
             Not Sure What Fits Your Needs?
           </h2>
-          <p className="opacity-90 mb-10">
+          <p className="text-neutral-600 mb-10">
             Share your requirements and we’ll help you explore suitable options.
           </p>
           <a
             href="/quote"
-            className="inline-block bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold"
+            className="inline-block bg-neutral-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-neutral-800 transition"
           >
             Request a Quote
           </a>
