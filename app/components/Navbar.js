@@ -15,34 +15,22 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="Raya Gifts & Stationery"
-            className="h-14 md:h-16 w-auto object-contain brightness-0 invert"
+            className="h-12 md:h-14 w-auto object-contain"
           />
         </a>
 
         {/* NAV LINKS */}
         <nav className="space-x-8 text-sm font-medium">
-          <a
-            href="/products"
-            className="text-slate-100 hover:text-red-500 transition-colors"
-          >
+          <a href="/products" className="hover:text-indigo-700 transition">
             Products
           </a>
-          <a
-            href="/about"
-            className="text-slate-100 hover:text-red-500 transition-colors"
-          >
+          <a href="/about" className="hover:text-indigo-700 transition">
             About
           </a>
-          <a
-            href="/quote"
-            className="text-slate-100 hover:text-red-500 transition-colors"
-          >
+          <a href="/quote" className="hover:text-indigo-700 transition">
             Get Quote
           </a>
-          <a
-            href="/contact"
-            className="text-slate-100 hover:text-red-500 transition-colors"
-          >
+          <a href="/contact" className="hover:text-indigo-700 transition">
             Sustainability
           </a>
         </nav>
