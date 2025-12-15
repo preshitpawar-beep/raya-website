@@ -69,22 +69,26 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-neutral-900 text-white py-24">
-        <div className="max-w-4xl mx-auto text-center px-8">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Create Meaningful Corporate Gifts?
-          </h2>
-          <p className="opacity-80 mb-10">
-            Tell us about your requirements and we’ll guide you through the process.
-          </p>
-          <a
-            href="/quote"
-            className="inline-block bg-white text-neutral-900 px-8 py-4 rounded-full font-semibold"
-          >
-            Request a Quote
-          </a>
-        </div>
-      </section>
+     {/* CTA */}
+<section className="bg-white py-24 border-t border-neutral-200">
+  <div className="max-w-4xl mx-auto text-center px-8">
+    <h2 className="text-4xl font-bold mb-6 text-neutral-900">
+      Ready to Create Meaningful Corporate Gifts?
+    </h2>
+
+    <p className="text-neutral-600 mb-10">
+      Tell us about your requirements and we’ll guide you through the process
+      with thoughtful, well-crafted gifting solutions.
+    </p>
+
+    <a
+      href="/quote"
+      className="inline-block bg-neutral-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-neutral-800 transition"
+    >
+      Request a Quote
+    </a>
+  </div>
+</section>
     </>
   );
 }
