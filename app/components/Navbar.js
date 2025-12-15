@@ -1,4 +1,3 @@
-
 "use client";
 import { motion } from "framer-motion";
 
@@ -10,16 +9,30 @@ export default function Navbar() {
       className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b"
     >
       <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-        <img
-          src="https://giftify-pro.preview.emergentagent.com/logo.svg"
-          alt="Raya"
-          className="h-8"
-        />
+        
+        {/* LOGO (clickable → home) */}
+        <a href="/" className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="Raya Gifts & Stationery"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
+        </a>
+
+        {/* NAV LINKS */}
         <nav className="space-x-8 text-sm font-medium">
-          <a href="/products">Products</a>
-          <a href="/about">About</a>
-          <a href="/quote">Get Quote</a>
-          <a href="/contact">Sustainability</a>
+          <a href="/products" className="hover:text-indigo-700 transition">
+            Products
+          </a>
+          <a href="/about" className="hover:text-indigo-700 transition">
+            About
+          </a>
+          <a href="/quote" className="hover:text-indigo-700 transition">
+            Get Quote
+          </a>
+          <a href="/contact" className="hover:text-indigo-700 transition">
+            Sustainability
+          </a>
         </nav>
       </div>
     </motion.header>
