@@ -9,7 +9,7 @@ export default function Navbar() {
       className="sticky top-0 z-50 backdrop-blur bg-slate-900/95 border-b border-slate-800"
     >
       <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-
+        
         {/* LOGO (clickable → home) */}
         <a href="/" className="flex items-center">
           <img
