@@ -9,13 +9,13 @@ export default function Sustainability() {
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-neutral-900 text-white">
+      <section className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-8 py-28">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-extrabold mb-6"
+            className="text-5xl font-extrabold mb-6 text-neutral-900"
           >
             Sustainability
           </motion.h1>
