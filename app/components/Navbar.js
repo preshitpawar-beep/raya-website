@@ -8,7 +8,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b"
     >
-      <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
         
         {/* LOGO (clickable → home) */}
         <a href="/" className="flex items-center">
