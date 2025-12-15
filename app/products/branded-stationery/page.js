@@ -1,6 +1,29 @@
 "use client";
 import { motion } from "framer-motion";
 
+const categories = [
+  {
+    title: "Pens",
+    href: "/products/branded-stationery/pens",
+  },
+  {
+    title: "Notebooks & Notepads",
+    href: "/products/branded-stationery/notebooks",
+  },
+  {
+    title: "Coasters",
+    href: "/products/branded-stationery/coasters",
+  },
+  {
+    title: "Key Rings",
+    href: "/products/branded-stationery/key-rings",
+  },
+  {
+    title: "Bags",
+    href: "/products/branded-stationery/bags",
+  },
+];
+
 export default function BrandedStationeryPage() {
   return (
     <>
@@ -27,34 +50,29 @@ export default function BrandedStationeryPage() {
       <section className="bg-slate-50">
         <div className="max-w-7xl mx-auto px-8 py-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[
-              "Pens",
-              "Notebooks & Notepads",
-              "Coasters",
-              "Key Rings",
-              "Bags",
-            ].map((item, index) => (
-              <motion.div
-                key={item}
+            {categories.map((item, index) => (
+              <motion.a
+                key={item.title}
+                href={item.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-sm border"
+                className="block bg-white rounded-2xl p-8 shadow-sm border hover:shadow-md transition"
               >
-                <h3 className="text-xl font-semibold mb-3">{item}</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  {item.title}
+                </h3>
                 <p className="text-slate-600 mb-6">
-                  Thoughtfully designed {item.toLowerCase()} that can be branded
-                  to reflect your identity.
+                  Thoughtfully designed{" "}
+                  {item.title.toLowerCase()} that can be branded to reflect your
+                  identity.
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-block text-sm font-medium underline underline-offset-4"
-                >
+                <span className="inline-block text-sm font-medium underline underline-offset-4">
                   View products
-                </a>
-              </motion.div>
+                </span>
+              </motion.a>
             ))}
           </div>
         </div>
@@ -62,4 +80,3 @@ export default function BrandedStationeryPage() {
     </>
   );
 }
-
