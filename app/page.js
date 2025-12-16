@@ -9,36 +9,58 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-indigo-700 to-purple-700 text-white">
-        <div className="max-w-7xl mx-auto px-8 py-32">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl font-extrabold leading-tight mb-6"
-          >
-            Corporate Gifting <br /> Made Simple & Memorable
-          </motion.h1>
+      <section className="bg-white border-b">
+      <div className="max-w-7xl mx-auto px-8 py-28 grid md:grid-cols-2 gap-16 items-center">
+    
+    {/* TEXT */}
+    <div>
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-5xl font-extrabold leading-tight mb-6 text-neutral-900"
+      >
+        Corporate Gifting <br /> Made Simple & Memorable
+      </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="max-w-xl text-lg opacity-90 mb-10"
-          >
-            We help businesses create meaningful brand moments through thoughtfully
-            designed stationery and custom corporate gifts.
-          </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        className="max-w-xl text-lg text-neutral-600 mb-10"
+      >
+        We help businesses create meaningful brand moments through thoughtfully
+        designed stationery and custom corporate gifts.
+      </motion.p>
 
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            href="/quote"
-            className="inline-block bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold shadow-lg"
-          >
-            Get Started
-          </motion.a>
-        </div>
-      </section>
+      <motion.a
+        whileHover={{ scale: 1.05 }}
+        href="/quote"
+        className="inline-block bg-neutral-900 text-white px-8 py-4 rounded-full font-semibold shadow-md"
+      >
+        Get Started
+      </motion.a>
+    </div>
+
+    {/* IMAGE */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.3 }}
+      className="w-full"
+    >
+      <div className="w-full h-[380px] rounded-3xl bg-neutral-100 overflow-hidden">
+        {/* Image will go here */}
+        <img
+          src="/images/home-hero.jpg"
+          alt="Premium corporate gifting arrangement"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </motion.div>
+
+  </div>
+</section>
 
       {/* HOW IT WORKS PREVIEW */}
       <section className="max-w-7xl mx-auto px-8 py-24">
