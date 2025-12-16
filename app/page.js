@@ -62,33 +62,64 @@ export default function Home() {
   </div>
 </section>
 
-      {/* HOW IT WORKS PREVIEW */}
-      <section className="max-w-7xl mx-auto px-8 py-24">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          How It Works
-        </h2>
+<section className="max-w-7xl mx-auto px-8 py-24">
+  <h2 className="text-4xl font-bold text-center mb-16 text-neutral-900">
+    How It Works
+  </h2>
 
-        <div className="grid md:grid-cols-4 gap-12 text-center">
-          {[
-            { title: "Choose Products", desc: "Select from a curated range of premium corporate gifts and stationery." },
-            { title: "Customize Branding", desc: "Add your logo, colors, and messaging with precision." },
-            { title: "Production", desc: "We manage production with attention to quality and detail." },
-            { title: "Delivery", desc: "Your gifts are prepared and delivered as per your requirements." }
-          ].map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-2xl shadow-md p-8"
-            >
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-sm opacity-70">{step.desc}</p>
-            </motion.div>
-          ))}
+  <div className="grid md:grid-cols-4 gap-12 text-center">
+    {[
+      {
+        title: "Choose Products",
+        desc: "Select from a curated range of premium corporate gifts and stationery.",
+        icon: "/images/how-it-works/choose.png",
+      },
+      {
+        title: "Customize Branding",
+        desc: "Add your logo, colors, and messaging with precision.",
+        icon: "/images/how-it-works/customize.png",
+      },
+      {
+        title: "Production",
+        desc: "We manage production with attention to quality and detail.",
+        icon: "/images/how-it-works/production.png",
+      },
+      {
+        title: "Delivery",
+        desc: "Your gifts are prepared and delivered as per your requirements.",
+        icon: "/images/how-it-works/delivery.png",
+      },
+    ].map((step, i) => (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: i * 0.1 }}
+        className="bg-white rounded-2xl shadow-md p-8"
+      >
+        {/* ICON */}
+        <div className="flex justify-center mb-6">
+          <div className="w-14 h-14 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden">
+            <img
+              src={step.icon}
+              alt={step.title}
+              className="w-8 h-8 object-contain"
+            />
+          </div>
         </div>
-      </section>
+
+        <h3 className="text-xl font-semibold mb-3 text-neutral-900">
+          {step.title}
+        </h3>
+        <p className="text-sm text-neutral-600">
+          {step.desc}
+        </p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       {/* CTA */}
      {/* CTA */}
