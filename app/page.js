@@ -52,7 +52,7 @@ export default function Home() {
       <div className="w-full h-[380px] rounded-3xl bg-neutral-100 overflow-hidden">
         {/* Image will go here */}
         <img
-          src="/images/home-hero.jpg"
+          src="/images/home-hero.png"
           alt="Premium corporate gifting arrangement"
           className="w-full h-full object-cover"
         />
