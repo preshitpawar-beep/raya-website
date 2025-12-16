@@ -104,7 +104,7 @@ export default function Home() {
             <img
               src={step.icon}
               alt={step.title}
-              className="w-8 h-8 object-contain"
+              className="w-16 h-16 object-contain"
             />
           </div>
         </div>
