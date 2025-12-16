@@ -32,23 +32,44 @@ export default function Products() {
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-8 py-28">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl font-extrabold mb-6 text-neutral-900"
-          >
-            Our Solutions
-          </motion.h1>
+<section className="bg-white border-b">
+  <div className="max-w-7xl mx-auto px-8 py-28 grid md:grid-cols-2 gap-16 items-center">
+    
+    {/* TEXT */}
+    <div>
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-5xl font-extrabold mb-6 text-neutral-900"
+      >
+        Our Solutions
+      </motion.h1>
 
-          <p className="max-w-xl text-lg text-neutral-600">
-            A flexible range of corporate gifting and branding solutions designed
-            to meet different business needs.
-          </p>
-        </div>
-      </section>
+      <p className="max-w-xl text-lg text-neutral-600">
+        A flexible range of corporate gifting and branding solutions designed
+        to meet different business needs.
+      </p>
+    </div>
+
+    {/* IMAGE */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.3 }}
+      className="w-full"
+    >
+      <div className="w-full h-[380px] rounded-3xl bg-neutral-100 overflow-hidden">
+        <img
+          src="/images/products-hero.png"
+          alt="Wide selection of branded corporate gifts"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </motion.div>
+
+  </div>
+</section>
 
       {/* GRID */}
       <section className="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-12">
