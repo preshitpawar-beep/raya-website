@@ -100,7 +100,7 @@ export default function Home() {
       >
         {/* ICON */}
         <div className="flex justify-center mb-6">
-          <div className="w-14 h-14 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden">
+          <div className="w-24 h-24 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden">
             <img
               src={step.icon}
               alt={step.title}
