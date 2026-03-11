@@ -77,11 +77,7 @@ export default function Hero() {
 
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{
-          zIndex: 3,
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
-          opacity: 0.03,
-        }}
+        style={{ zIndex: 3, opacity: 0.03 }}
       />
 
       <div className="absolute top-1/4 right-0 w-px h-64 bg-gradient-to-b from-transparent via-gold/30 to-transparent pointer-events-none" style={{ zIndex: 4 }} />
@@ -153,21 +149,20 @@ export default function Hero() {
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`transition-all duration-500 rounded-full ${
-              i === current ? 'w-8 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-cream-100/30 hover:bg-cream-100/60'
-            }`}
+            className={`transition-all duration-500 rounded-full ${i === current ? 'w-8 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-cream-100/30 hover:bg-cream-100/60'}`}
           />
         ))}
       </div>
 
-      
-        href="#featured"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink-400 hover:text-gold transition-colors duration-200 group"
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
         style={{ zIndex: 5 }}
+        onClick={() => document.getElementById('featured').scrollIntoView({ behavior: 'smooth' })}
       >
-        <span className="font-mono text-[9px] tracking-widest uppercase opacity-60">Scroll</span>
-        <ArrowDown size={14} className="animate-bounce group-hover:text-gold" strokeWidth={1.5} />
-      </a>
+        <span className="font-mono text-[9px] tracking-widest uppercase opacity-60 text-ink-400">Scroll</span>
+        <ArrowDown size={14} className="animate-bounce text-ink-400" strokeWidth={1.5} />
+      </div>
+
     </section>
   );
 }
