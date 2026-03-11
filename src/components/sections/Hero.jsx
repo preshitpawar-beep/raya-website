@@ -1,5 +1,4 @@
 'use client';
-// src/components/sections/Hero.jsx
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -55,13 +54,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
 
-      {/* Slides */}
       {SLIDES.map((slide, i) => (
         <div
           key={slide.src}
           className="absolute inset-0 transition-opacity duration-[1200ms] ease-in-out"
           style={{
-            opacity: i === current ? 1 : i === prev && fading ? 0 : 0,
+            opacity: i === current ? 1 : 0,
             zIndex: i === current ? 2 : i === prev ? 1 : 0,
           }}
         >
@@ -77,21 +75,18 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Grain overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           zIndex: 3,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
           opacity: 0.03,
         }}
       />
 
-      {/* Accent lines */}
       <div className="absolute top-1/4 right-0 w-px h-64 bg-gradient-to-b from-transparent via-gold/30 to-transparent pointer-events-none" style={{ zIndex: 4 }} />
       <div className="absolute bottom-1/3 left-24 w-px h-40 bg-gradient-to-b from-transparent via-gold/20 to-transparent hidden md:block pointer-events-none" style={{ zIndex: 4 }} />
 
-      {/* Content */}
       <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20 w-full" style={{ zIndex: 5 }}>
         <div className="max-w-3xl">
           <p
@@ -110,7 +105,7 @@ export default function Hero() {
           >
             Leave a mark
             <br />
-            <em className="italic text-gold not-italic">that lasts.</em>
+            <span className="text-gold">that lasts.</span>
           </h1>
 
           <p
@@ -143,11 +138,7 @@ export default function Hero() {
             className="mt-16 flex flex-wrap gap-6 opacity-0"
             style={{ animation: 'fadeUp 0.7s ease 0.9s forwards' }}
           >
-            {[
-              'Free visual proof',
-              'Response within 1 working day',
-              'Clear pricing, no hidden costs',
-            ].map((item) => (
+            {['Free visual proof', 'Response within 1 working day', 'Clear pricing, no hidden costs'].map((item) => (
               <span key={item} className="flex items-center gap-2 text-xs text-ink-400 font-light">
                 <span className="w-1 h-1 rounded-full bg-gold flex-shrink-0" />
                 {item}
@@ -157,31 +148,22 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Slide dots */}
-      <div
-        className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3"
-        style={{ zIndex: 5 }}
-      >
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3" style={{ zIndex: 5 }}>
         {SLIDES.map((_, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
             className={`transition-all duration-500 rounded-full ${
-              i === current
-                ? 'w-8 h-1.5 bg-gold'
-                : 'w-1.5 h-1.5 bg-cream-100/30 hover:bg-cream-100/60'
+              i === current ? 'w-8 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-cream-100/30 hover:bg-cream-100/60'
             }`}
           />
         ))}
       </div>
 
-      {/* Scroll indicator */}
       
         href="#featured"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink-400 hover:text-gold transition-colors duration-200 group"
         style={{ zIndex: 5 }}
-        aria-label="Scroll to featured products"
       >
         <span className="font-mono text-[9px] tracking-widest uppercase opacity-60">Scroll</span>
         <ArrowDown size={14} className="animate-bounce group-hover:text-gold" strokeWidth={1.5} />
