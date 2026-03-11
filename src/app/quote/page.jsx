@@ -5,7 +5,7 @@ import QuoteForm from './QuoteForm';
 export const metadata = buildMetadata({
   title: 'Get a Quote',
   description:
-    'Request a personalised branded merchandise quote for your UK business. Tell us what you need and we'll respond with clear pricing within one working day.',
+    "Request a personalised branded merchandise quote for your UK business. Tell us what you need and we'll respond with clear pricing within one working day.",
   path: '/quote',
 });
 
